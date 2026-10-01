@@ -22,6 +22,23 @@ jobs:
       - name: Unit tests (JUnit4 + MockK)
         run: ./gradlew testDebugUnitTest --stacktrace
 
+      - name: Unit test summary
+        if: always()
+        run: |
+          python3 - <<'PY' | tee -a "$GITHUB_STEP_SUMMARY"
+          import glob
+          import xml.etree.ElementTree as ET
+
+          tests = failures = errors = skipped = 0
+          for path in glob.glob("app/build/test-results/testDebugUnitTest/*.xml"):
+              root = ET.parse(path).getroot()
+              tests += int(root.get("tests"))
+              failures += int(root.get("failures"))
+              errors += int(root.get("errors"))
+              skipped += int(root.get("skipped"))
+          print(f"Unit tests: total={tests} failures={failures} errors={errors} skipped={skipped}")
+          PY
+
       - name: Build debug APK
         run: ./gradlew assembleDebug --stacktrace
 
