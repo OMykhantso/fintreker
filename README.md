@@ -116,19 +116,17 @@ app/src/test/…         # Unit-тести (domain, data, viewmodels)
 
 ## Окрема версія проєкту для кожної лабораторної
 
-Стан проєкту **після кожної лабораторної** збережено як git-тег. Кожна версія збирається й запускається самостійно
-(її перевіряє CI), тож лабу можна здавати окремо.
+Стан проєкту **після кожної лабораторної** лежить в окремій теці — це повноцінний самостійний Gradle-проєкт.
+Щоб здати лабу окремо, відкрийте в Android Studio саме потрібну теку (`File → Open`). CI збирає кожну з них.
 
-| Тег | Що в проєкті на цей момент | ZIP |
+| Лаб | Тека | Що в проєкті на цей момент |
 |---|---|---|
-| `lab1` | Один екран «Нова витрата»: сума (`Decimal`), категорії (`FilterChip`), валідація, `Rules.md` | [lab1.zip](https://github.com/OMykhantso/fintreker/archive/refs/tags/lab1.zip) |
-| `lab2` | + Type-Safe Navigation: Огляд → Нова витрата → Історія(`category`), Bottom Bar, анімації (дані в пам'яті) | [lab2.zip](https://github.com/OMykhantso/fintreker/archive/refs/tags/lab2.zip) |
-| `lab3` | + Room (`SUM … GROUP BY`), `EncryptedSharedPreferences` (PIN, ліміт), MVVM + `collectAsStateWithLifecycle()` | [lab3.zip](https://github.com/OMykhantso/fintreker/archive/refs/tags/lab3.zip) |
-| `lab4` | + Retrofit/НБУ, Offline-First курси, кругова діаграма, shimmer, sealed `UiState` | [lab4.zip](https://github.com/OMykhantso/fintreker/archive/refs/tags/lab4.zip) |
-| `lab5` | + WorkManager, сповіщення, Deep Link, відновлення після перезавантаження | [lab5.zip](https://github.com/OMykhantso/fintreker/archive/refs/tags/lab5.zip) |
-| `lab6` | + Unit-тести (MockK), пагінація, README — **фінальна версія** | [lab6.zip](https://github.com/OMykhantso/fintreker/archive/refs/tags/lab6.zip) |
-
-Перейти на потрібну версію: `git fetch --tags && git checkout lab3`.
+| 1 | [`labs/lab1`](labs/lab1) | Один екран «Нова витрата»: сума (`Decimal`), категорії (`FilterChip`), валідація, `Rules.md` |
+| 2 | [`labs/lab2`](labs/lab2) | + Type-Safe Navigation: Огляд → Нова витрата → Історія(`category`), Bottom Bar, анімації (дані в пам'яті) |
+| 3 | [`labs/lab3`](labs/lab3) | + Room (`SUM … GROUP BY`), `EncryptedSharedPreferences` (PIN, ліміт), ViewModel + `collectAsStateWithLifecycle()` |
+| 4 | [`labs/lab4`](labs/lab4) | + Retrofit/НБУ, Offline-First курси, кругова діаграма, shimmer, sealed `UiState` |
+| 5 | [`labs/lab5`](labs/lab5) | + WorkManager, сповіщення, Deep Link, відновлення після перезавантаження |
+| 6 | корінь репозиторію | + Unit-тести (MockK), пагінація, README — **фінальна версія** |
 
 ## Запуск
 

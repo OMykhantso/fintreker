@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Монета з рядками «чека» — у безпечній зоні адаптивної іконки (центральні 66 з 108 dp). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,30C40.75,30 30,40.75 30,54s10.75,24 24,24 24,-10.75 24,-24S67.25,30 54,30z" />
+    <path
+        android:fillColor="#00695C"
+        android:pathData="M43,46h22v4H43z" />
+    <path
+        android:fillColor="#00695C"
+        android:pathData="M43,54h22v4H43z" />
+    <path
+        android:fillColor="#00695C"
+        android:pathData="M43,62h14v4H43z" />
+</vector>

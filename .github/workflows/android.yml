@@ -54,3 +54,28 @@ jobs:
         with:
           name: app-debug
           path: app/build/outputs/apk/debug/app-debug.apk
+
+  # Знімки проєкту після Лаб 1–5 (labs/labN) — кожен збирається самостійно.
+  labs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        lab: [lab1, lab2, lab3, lab4, lab5]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          build-root-directory: labs/${{ matrix.lab }}
+
+      - name: Build debug APK (${{ matrix.lab }})
+        working-directory: labs/${{ matrix.lab }}
+        run: ./gradlew assembleDebug --stacktrace
