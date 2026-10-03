@@ -114,6 +114,22 @@ app/src/test/…         # Unit-тести (domain, data, viewmodels)
 | 5 | WorkManager, сповіщення | `work/*`, `AndroidManifest.xml` (`POST_NOTIFICATIONS`, `RECEIVE_BOOT_COMPLETED`, Deep Link `fintreker://add`) |
 | 6 | Тести, пагінація, README | `app/src/test`, `ui/viewmodels/HistoryViewModel.kt` (`loadMore()`), цей файл |
 
+## Окрема версія проєкту для кожної лабораторної
+
+Стан проєкту **після кожної лабораторної** збережено як git-тег. Кожна версія збирається й запускається самостійно
+(її перевіряє CI), тож лабу можна здавати окремо.
+
+| Тег | Що в проєкті на цей момент | ZIP |
+|---|---|---|
+| `lab1` | Один екран «Нова витрата»: сума (`Decimal`), категорії (`FilterChip`), валідація, `Rules.md` | [lab1.zip](https://github.com/OMykhantso/fintreker/archive/refs/tags/lab1.zip) |
+| `lab2` | + Type-Safe Navigation: Огляд → Нова витрата → Історія(`category`), Bottom Bar, анімації (дані в пам'яті) | [lab2.zip](https://github.com/OMykhantso/fintreker/archive/refs/tags/lab2.zip) |
+| `lab3` | + Room (`SUM … GROUP BY`), `EncryptedSharedPreferences` (PIN, ліміт), MVVM + `collectAsStateWithLifecycle()` | [lab3.zip](https://github.com/OMykhantso/fintreker/archive/refs/tags/lab3.zip) |
+| `lab4` | + Retrofit/НБУ, Offline-First курси, кругова діаграма, shimmer, sealed `UiState` | [lab4.zip](https://github.com/OMykhantso/fintreker/archive/refs/tags/lab4.zip) |
+| `lab5` | + WorkManager, сповіщення, Deep Link, відновлення після перезавантаження | [lab5.zip](https://github.com/OMykhantso/fintreker/archive/refs/tags/lab5.zip) |
+| `lab6` | + Unit-тести (MockK), пагінація, README — **фінальна версія** | [lab6.zip](https://github.com/OMykhantso/fintreker/archive/refs/tags/lab6.zip) |
+
+Перейти на потрібну версію: `git fetch --tags && git checkout lab3`.
+
 ## Запуск
 
 **Вимоги:** Android Studio Ladybug (2024.2) або новіша, JDK 17, Android SDK 34.
