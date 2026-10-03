@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Весь UI — Jetpack Compose; системна тема лише задає фон вікна до першого кадру. -->
+    <style name="Theme.FinTreker" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
